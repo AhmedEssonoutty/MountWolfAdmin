@@ -48,6 +48,12 @@ const router = createRouter({
       meta: { title: "Technichal support" },
     },
     {
+      path: "/dashboard/About-vendor",
+      name: "about",
+      component: () => import("@/views/AboutVendor.vue"),
+      meta: { title: "About Vendor" },
+    },
+    {
       path: "/:pathMatch(.*)*",
       name: "Not-found",
       component: () => import("../views/NotFound.vue"),

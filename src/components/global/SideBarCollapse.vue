@@ -1,5 +1,5 @@
 <template>
-  <div class="container collapse-nav" style="min-width: 10rem;">
+  <div class="container collapse-nav" style="max-width: 8rem;min-width: 5rem;">
     <div class="row flex-nowrap">
       <div class="side-bar border">
         <div class="d-flex flex-column align-items-center px-3 pt-2 text-white ">

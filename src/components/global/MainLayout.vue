@@ -9,7 +9,7 @@
         style="height: 100% !important; " v-if="route.name !== 'signin' && navResponse">
       </SideBarCollapse>
 
-      <main :class="`${route.name == 'signin' ? 'col-12' : 'col'
+      <main style="overflow: hidden !important;" :class="`${route.name == 'signin' ? 'col-12' : 'col'
         } min-vh-100 p-0 border-top `">
         <Hint v-if="route.name !== 'signin'"></Hint>
         <div>

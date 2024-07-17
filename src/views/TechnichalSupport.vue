@@ -1,9 +1,20 @@
 <template>
-  <div class="main-body m-3">
-    <p class="style-3">support</p>
+  <div class=" m-4">
+    <div class="row">
+      <div class="col me-0 main-body">
+        <SupportMessages></SupportMessages>
+      </div>
+      <div class="col-3 main-body">
+        <Messages></Messages>
+      </div>
+    </div>
+
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+import Messages from "@/components/page-component/Support/UserMessages.vue"
+import SupportMessages from "@/components/page-component/Support/SupportMessages.vue"
+</script>
 
 <style lang="scss" scoped></style>

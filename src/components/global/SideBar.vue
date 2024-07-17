@@ -1,5 +1,5 @@
 <template>
-  <div class="container-fluid" style="min-width: 31.6rem;">
+  <div class="container-fluid" style="min-width:20rem;max-width: 25rem;">
     <div class="row flex-nowrap">
       <div class="side-bar border">
         <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white">
