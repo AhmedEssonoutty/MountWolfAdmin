@@ -1,19 +1,18 @@
-<template>
-  <div v-if="show">
-    <apexchart width="200" type="radialBar" :options="options" :series="series"></apexchart>
-  </div>
-</template>
+  <template>
+    <div v-if="show">
+      <apexchart height="100" type="radialBar" :options="options" :series="series"></apexchart>
+    </div>
+  </template>
 
 <script setup>
 import VueApexCharts from "vue3-apexcharts";
 import { onMounted, ref } from "vue";
-
 const color = ref('')
 const show = ref(false)
 
 const options = ref({
   chart: {
-    height: 350,
+    height: 100,
     type: "radialBar",
   },
   plotOptions: {

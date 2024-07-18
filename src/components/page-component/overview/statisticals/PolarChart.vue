@@ -1,6 +1,6 @@
 <template>
     <div v-if="show" class="area-chart w-100 h-100 d-flex align-items-center justify-content-center">
-        <apexchart type="polarArea" width="250" :options="chartOptions" :series="series"></apexchart>
+        <apexchart type="polarArea" :options="chartOptions" :series="series"></apexchart>
     </div>
 </template>
 
@@ -15,8 +15,6 @@ const series = ref([14, 23, 21,])
 const chartOptions = ref({
     chart: {
         type: 'polarArea',
-        width: 250,
-
     },
     stroke: {
         curve: 'smooth',

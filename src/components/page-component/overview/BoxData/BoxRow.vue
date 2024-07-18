@@ -3,8 +3,8 @@
         <div>
             <h3 v-if="props.rowTitle" class="management-title">{{ props.rowTitle }}</h3>
             <div class="row">
-                <div class="col-12 col-sm  my-2" v-for="(item, i) in props.btnsData" :key="i">
-                    <button class="squ-btn d-flex h-100 my-auto flex-column h-100">
+                <div class="my-2 col" v-for="(item, i) in props.btnsData" :key="i">
+                    <button class="squ-btn   d-flex my-auto flex-column h-100 ">
                         <p>{{ item.name }}</p>
                         <p class="info">{{ item.data }}</p>
                     </button>

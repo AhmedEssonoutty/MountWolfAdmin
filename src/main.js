@@ -1,4 +1,6 @@
 import "./assets/main.scss";
+import "./assets/media-queries.scss";
+
 import "bootstrap/dist/css/bootstrap.css";
 
 // icon

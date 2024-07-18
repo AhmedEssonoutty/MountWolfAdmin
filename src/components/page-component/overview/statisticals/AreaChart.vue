@@ -1,13 +1,11 @@
 <template>
-    <div class="area-chart w-100">
-        <apexchart type="area" height="350" :options="chartOptions" :series="series"></apexchart>
+    <div class="area-chart">
+        <apexchart type="area" :options="chartOptions" :series="series"></apexchart>
     </div>
 </template>
 
 <script setup>
 import { ref, onMounted } from "vue";
-
-const color = ref('')
 
 const series = ref([{
     name: 'series1',
@@ -25,7 +23,6 @@ const series = ref([{
 
 const chartOptions = ref({
     chart: {
-        height: 350,
         type: 'area'
     },
     dataLabels: {
@@ -47,4 +44,8 @@ const chartOptions = ref({
 
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.area-chart {
+    width: 100%;
+}
+</style>
