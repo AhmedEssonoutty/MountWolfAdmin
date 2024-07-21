@@ -1,10 +1,10 @@
 <template>
     <div class="management-card ">
-        <div class="center w-50  ">
+        <div class="center-col w-50  ">
             <p>{{ cardTitle }}</p>
             <p class=" ps-4 count">{{ cardCount }}</p>
         </div>
-        <div class="center">
+        <div class="center-col">
             <CircleChart :percentage="props.cardPercentage" :circleColor="props.chartColor"></CircleChart>
         </div>
     </div>

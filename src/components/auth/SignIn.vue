@@ -1,57 +1,35 @@
 <template>
-  <div
-    class="d-flex align-items-center justify-content-center"
-    style="min-height: 100vh"
-  >
+  <div class="center-col" style="min-height: 100vh">
     <form action="#" @submit.prevent="submitLogin" class="singBox">
       <!-- email -->
-      <div class="center">
-        <input
-          type="text"
-          name="email"
-          class="sign-field"
-          v-model="formData.email"
-          placeholder="Email"
-          :disabled="btnLoadin"
-          :class="checkErrName(['email']) ? 'err-border' : ''"
-        />
-        <span class="center" v-for="(err, i) in validationObj.$errors" :key="i"
-          ><span v-if="err.$property == 'email'" class="err-msg">
+      <div class="center-col">
+        <input type="text" name="email" class="sign-field" v-model="formData.email" placeholder="Email"
+          :disabled="btnLoadin" :class="checkErrName(['email']) ? 'err-border' : ''" />
+        <span class="center-col" v-for="(err, i) in validationObj.$errors" :key="i"><span
+            v-if="err.$property == 'email'" class="err-msg">
             <vue-feather size="1.2rem" type="alert-circle"></vue-feather>
             {{ err.$message }}
-          </span></span
-        >
+          </span></span>
       </div>
 
       <!-- password -->
-      <div class="center">
-        <input
-          :type="`${showPass ? 'text' : 'password'}`"
-          name="Password"
-          placeholder="Password"
-          v-model="formData.password"
-          class="sign-field"
-          :disabled="btnLoadin"
-          :class="checkErrName(['password']) ? 'err-border' : ''"
-        />
+      <div class="center-col">
+        <input :type="`${showPass ? 'text' : 'password'}`" name="Password" placeholder="Password"
+          v-model="formData.password" class="sign-field" :disabled="btnLoadin"
+          :class="checkErrName(['password']) ? 'err-border' : ''" />
 
-        <span class="center" v-for="(err, i) in validationObj.$errors" :key="i"
-          ><span v-if="err.$property == 'password'" class="err-msg">
+        <span class="center-col" v-for="(err, i) in validationObj.$errors" :key="i"><span
+            v-if="err.$property == 'password'" class="err-msg">
             <vue-feather size="1.2rem" type="alert-circle"></vue-feather>
 
             {{ err.$message }}
-          </span></span
-        >
+          </span></span>
       </div>
       <i class="fe fe-activity"></i>
 
       <button v-if="!btnLoadin" class="sign-btn" type="submit">Login</button>
       <button v-else class="sign-btn" type="submit">
-        <vue-feather
-          type="rotate-cw"
-          animation="spin"
-          animation-speed="slow"
-        ></vue-feather>
+        <vue-feather type="rotate-cw" animation="spin" animation-speed="slow"></vue-feather>
       </button>
     </form>
   </div>

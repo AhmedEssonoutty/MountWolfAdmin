@@ -58,7 +58,7 @@
 
                     <tr>
                         <td>65165651</td>
-                        <td class="center flex-row"> <vue-feather class="me-2 " style="width: 2rem;height:2.3rem"
+                        <td class="center-row"> <vue-feather class="me-2 " style="width: 2rem;height:2.3rem"
                                 type="credit-card"></vue-feather><span>****67836</span></td>
                         <td>Free</td>
                         <td>menus@gmail.com</td>
@@ -73,7 +73,7 @@
                     </tr>
                     <tr>
                         <td>65165651</td>
-                        <td class="center flex-row"> <vue-feather class="me-2 " style="width: 2rem;height:2.3rem"
+                        <td class="center-row"> <vue-feather class="me-2 " style="width: 2rem;height:2.3rem"
                                 type="credit-card"></vue-feather><span>****67836</span></td>
                         <td>Free</td>
                         <td>menus@gmail.com</td>
@@ -88,7 +88,7 @@
                     </tr>
                     <tr>
                         <td>65165651</td>
-                        <td class="center flex-row"> <vue-feather class="me-2 " style="width: 2rem;height:2.3rem"
+                        <td class="center-row"> <vue-feather class="me-2 " style="width: 2rem;height:2.3rem"
                                 type="credit-card"></vue-feather><span>****67836</span></td>
                         <td>Free</td>
                         <td>menus@gmail.com</td>
@@ -103,7 +103,7 @@
                     </tr>
                     <tr>
                         <td>65165651</td>
-                        <td class="center flex-row"> <vue-feather class="me-2 " style="width: 2rem;height:2.3rem"
+                        <td class="center-row"> <vue-feather class="me-2 " style="width: 2rem;height:2.3rem"
                                 type="credit-card"></vue-feather><span>****67836</span></td>
                         <td>Free</td>
                         <td>menus@gmail.com</td>
@@ -118,7 +118,7 @@
                     </tr>
                     <tr>
                         <td>65165651</td>
-                        <td class="center flex-row"> <vue-feather class="me-2 " style="width: 2rem;height:2.3rem"
+                        <td class="center-row"> <vue-feather class="me-2 " style="width: 2rem;height:2.3rem"
                                 type="credit-card"></vue-feather><span>****67836</span></td>
                         <td>Free</td>
                         <td>menus@gmail.com</td>
@@ -133,7 +133,7 @@
                     </tr>
                     <tr>
                         <td>65165651</td>
-                        <td class="center flex-row"> <vue-feather class="me-2 " style="width: 2rem;height:2.3rem"
+                        <td class="center-row"> <vue-feather class="me-2 " style="width: 2rem;height:2.3rem"
                                 type="credit-card"></vue-feather><span>****67836</span></td>
                         <td>Free</td>
                         <td>menus@gmail.com</td>
@@ -148,7 +148,7 @@
                     </tr>
                     <tr>
                         <td>65165651</td>
-                        <td class="center flex-row"> <vue-feather class="me-2 " style="width: 2rem;height:2.3rem"
+                        <td class="center-row"> <vue-feather class="me-2 " style="width: 2rem;height:2.3rem"
                                 type="credit-card"></vue-feather><span>****67836</span></td>
                         <td>Free</td>
                         <td>menus@gmail.com</td>

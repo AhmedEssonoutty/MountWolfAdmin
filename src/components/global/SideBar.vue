@@ -2,7 +2,7 @@
   <div class="container-fluid" style="min-width:20rem;max-width: 25rem;">
     <div class="row flex-nowrap">
       <div class="side-bar border">
-        <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white">
+        <div class="center-col align-items-sm-start px-3 pt-2 text-white">
           <div @click="emits('collapse')" class="nav-item d-flex justify-center-between">
             <router-link to="/" class="nav-link align-middle px-0">
               <span class="side-Header"> NAVIGATION</span>

@@ -13,11 +13,13 @@
     "@vuelidate/validators": "^2.0.4",
     "apexcharts": "^3.50.0",
     "bootstrap": "^5.3.3",
+    "clipboard-polyfill": "^4.1.0",
     "feather-icons": "^4.29.2",
     "pinia": "^2.1.7",
     "sass": "^1.77.8",
     "vue": "^3.4.31",
     "vue-feather": "^2.0.0",
+    "vue-multiselect": "^3.0.0",
     "vue-router": "^4.3.3",
     "vue3-apexcharts": "^1.5.3"
   },

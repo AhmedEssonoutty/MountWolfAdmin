@@ -15,14 +15,10 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <!-- right icons -->
-          <div class="ms-auto d-flex align-items-center gap-4">
+          <div class="ms-auto center-row gap-4">
             <!-- bell -->
             <button type="button" class="btn position-relative bell-btn">
-              <span style="
-                  display: flex;
-                  flex-direction: column;
-                  align-items: center;
-                ">
+              <span class="center-row">
                 <svg style="width: 2.1rem;height: 2.1rem;" viewBox="0 0 21 22" fill="none"
                   xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -39,7 +35,7 @@
                     fill="#464A61" />
                 </svg>
               </span>
-              <span class="center count-tip position-absolute translate-middle rounded-circle">
+              <span class="center-col count-tip position-absolute translate-middle rounded-circle">
                 100
               </span>
             </button>
@@ -55,7 +51,7 @@
             <!-- user info -->
             <button type="button" class="btn">
               <div class="dropdown">
-                <a href="#" class="center flex-row gap-3 text-decoration-none dropdown-toggle" id="dropdownUser3"
+                <a href="#" class="center-row gap-3 text-decoration-none dropdown-toggle" id="dropdownUser3"
                   data-bs-toggle="dropdown" aria-expanded="false">
                   <img src="/src/assets/media/icons/Group 19.png" style="width:5.2rem;height: 5.2rem ;" alt="" />
                   <p class="user-info">Name admin</p>

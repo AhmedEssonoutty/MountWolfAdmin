@@ -1,38 +1,39 @@
 <template>
-    <div class="msgs-sup px-3">
-        <div class="msg-header border-bottom">
-            <div class="d-flex flex-row align-items-center gap-3 mb-3">
-                <svg style="width: 3.7rem;height: 3.7rem;" viewBox="0 0 37 37" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="18.5" cy="18.5" r="18.5" fill="#D9D9D9" />
-                </svg>
-                <div class="d-flex flex-column msg-info">
-                    <span class="name">
-                        Name vendor
+    <div class="msgs-sup center-col h-100 px-3">
+        <div>
+            <div class="msg-header border-bottom">
+                <div class="d-flex flex-row align-items-center gap-3 mb-3">
+                    <svg style="width: 3.7rem;height: 3.7rem;" viewBox="0 0 37 37" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="18.5" cy="18.5" r="18.5" fill="#D9D9D9" />
+                    </svg>
+                    <div class="d-flex flex-column msg-info">
+                        <span class="name">
+                            Name vendor
+                        </span>
+                        <span class="categ">
+                            Type Category
+                        </span>
+                        <span class="status">
+                            Active
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <!--  -->
+            <div v-for="(msg, i) in msgs" :key="i">
+
+                <div class=" d-flex flex-column mb-5" :class="msg.from == 'sup' ? 'msg-card-sup' : 'msg-card-user'">
+                    <span class="msg">
+                        {{ msg.msg }}
                     </span>
-                    <span class="categ">
-                        Type Category
-                    </span>
-                    <span class="status">
-                        Active
-                    </span>
+                    <span class="msg-info">00:00 pm</span>
+                    <span class="msg-info">DD/MM/YYYY</span>
                 </div>
             </div>
         </div>
         <!--  -->
-        <div v-for="(msg, i) in msgs" :key="i">
-
-            <div class=" d-flex flex-column mb-5" :class="msg.from == 'sup' ? 'msg-card-sup' : 'msg-card-user'">
-                <span class="msg">
-                    {{ msg.msg }}
-                </span>
-                <span class="msg-info">00:00 pm</span>
-                <span class="msg-info">DD/MM/YYYY</span>
-            </div>
-        </div>
-        <!--  -->
-        <div class="send-msg ">
-
+        <div class="send-msg w-100" style="margin-top: auto;">
             <input type="text" style="width: 85%;" placeholder="Type a message">
 
             <svg style="margin-left: 3rem; width: 4.8rem; height: 4.8rem ;" viewBox="0 0 48 48" fill="none"

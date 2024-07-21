@@ -1,23 +1,16 @@
 <template>
-  <div class="not-in d-flex justify-content-center align-items-center fs-3">
+  <div class="not-in center-col fs-3">
     <div class="d-flex gap-3">
-      <div
-        class="d-flex justify-content-between align-items-center"
-        style="width: fit-content"
-      >
+      <div class="d-flex justify-content-between align-items-center" style="width: fit-content">
         404 Not found
       </div>
-      <router-link
-        style="
+      <router-link style="
           text-decoration: none;
           color: black;
           border: 1px solid white;
           border-radius: 0.9rem;
           padding: 1rem;
-        "
-        to="/"
-        >Return to home</router-link
-      >
+        " to="/">Return to home</router-link>
     </div>
   </div>
 </template>

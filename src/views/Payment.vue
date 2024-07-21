@@ -91,7 +91,7 @@
             <td>65165651</td>
             <td>Name</td>
             <td>
-              <div class="center flex-row">
+              <div class="center-row">
                 <vue-feather class="me-2 " style="width: 2rem;height:2.3rem" type="credit-card"></vue-feather>
                 <span>****67836</span>
               </div>
@@ -114,7 +114,7 @@
             <td>65165651</td>
             <td>Name</td>
             <td>
-              <div class="center flex-row">
+              <div class="center-row">
                 <vue-feather class="me-2 " style="width: 2rem;height:2.3rem" type="credit-card"></vue-feather>
                 <span>****67836</span>
               </div>
@@ -137,7 +137,7 @@
             <td>65165651</td>
             <td>Name</td>
             <td>
-              <div class="center flex-row">
+              <div class="center-row">
                 <vue-feather class="me-2 " style="width: 2rem;height:2.3rem" type="credit-card"></vue-feather>
                 <span>****67836</span>
               </div>
@@ -160,7 +160,7 @@
             <td>65165651</td>
             <td>Name</td>
             <td>
-              <div class="center flex-row">
+              <div class="center-row">
                 <vue-feather class="me-2 " style="width: 2rem;height:2.3rem" type="credit-card"></vue-feather>
                 <span>****67836</span>
               </div>
@@ -183,7 +183,7 @@
             <td>65165651</td>
             <td>Name</td>
             <td>
-              <div class="center flex-row">
+              <div class="center-row">
                 <vue-feather class="me-2 " style="width: 2rem;height:2.3rem" type="credit-card"></vue-feather>
                 <span>****67836</span>
               </div>
@@ -206,7 +206,7 @@
             <td>65165651</td>
             <td>Name</td>
             <td>
-              <div class="center flex-row">
+              <div class="center-row">
                 <vue-feather class="me-2 " style="width: 2rem;height:2.3rem" type="credit-card"></vue-feather>
                 <span>****67836</span>
               </div>
@@ -229,7 +229,7 @@
             <td>65165651</td>
             <td>Name</td>
             <td>
-              <div class="center flex-row">
+              <div class="center-row">
                 <vue-feather class="me-2 " style="width: 2rem;height:2.3rem" type="credit-card"></vue-feather>
                 <span>****67836</span>
               </div>
@@ -252,7 +252,7 @@
             <td>65165651</td>
             <td>Name</td>
             <td>
-              <div class="center flex-row">
+              <div class="center-row">
                 <vue-feather class="me-2 " style="width: 2rem;height:2.3rem" type="credit-card"></vue-feather>
                 <span>****67836</span>
               </div>
@@ -275,7 +275,7 @@
             <td>65165651</td>
             <td>Name</td>
             <td>
-              <div class="center flex-row">
+              <div class="center-row">
                 <vue-feather class="me-2 " style="width: 2rem;height:2.3rem" type="credit-card"></vue-feather>
                 <span>****67836</span>
               </div>

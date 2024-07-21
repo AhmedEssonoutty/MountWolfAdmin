@@ -1,5 +1,5 @@
 <template>
-    <div v-if="show" class="area-chart d-flex align-items-center w-100 h-100 justify-content-center">
+    <div v-if="show" class="area-chart center-col w-100 h-100  ">
         <!-- <apexchart type="polarArea" :options="chartOptions" :series="series"></apexchart> -->
         <div id="chart">
             <apexchart type="polarArea" style="width: 45rem;height: 100% " :options="chartOptions" :series="series">

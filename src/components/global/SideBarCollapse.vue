@@ -2,7 +2,7 @@
   <div class="container collapse-nav" style="max-width: 8rem;min-width: 35px;">
     <div class="row flex-nowrap">
       <div class="side-bar border">
-        <div class="d-flex flex-column align-items-center px-3 pt-2 text-white ">
+        <div class="center-col px-3 pt-2 text-white ">
           <!-- collapse button -->
           <button @click="emits('collapse')" class="coll-btn "><svg
               style="min-width: 5px; width: 2rem;min-height: 4.5px; height: 1.8rem;" viewBox="0 0 16 14" fill="none"
@@ -16,7 +16,7 @@
             </svg></button>
 
           <ul class="w-100 nav nav-pills flex-column   align-items-center  " id="menu">
-            <li class="d-flex align-items-center text-white text-decoration-none center">
+            <li class=" text-white text-decoration-none center-col">
               <button @click="router.push({ name: 'overview' })" class="nav-link align-middle px-0">
                 <svg style=" min-width: 6px;min-height: 6px;  width: 2.4rem;height: 2.6rem;" viewBox="0 0 15 16"
                   fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -40,7 +40,7 @@
 
             </li>
             <li class="nav-item" @click="emits('collapse')">
-              <button class="d-flex align-items-center text-white text-decoration-none center">
+              <button class="text-white text-decoration-none center-col">
                 <svg style=" min-width: 6px;min-height: 6px; width: 2.7rem;height: 2.4rem;" viewBox="0 0 18 16"
                   fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -78,8 +78,7 @@
             </li>
 
             <li class="nav-item">
-              <button @click="router.push({ name: 'payment' })"
-                class="d-flex align-items-center text-white text-decoration-none center">
+              <button @click="router.push({ name: 'payment' })" class="text-white text-decoration-none center-col">
                 <svg style=" min-width: 6px;min-height: 6px;width: 2.8rem;height: 2.8rem;" viewBox="0 0 16 16"
                   fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -94,8 +93,7 @@
             </li>
 
             <li class="nav-item">
-              <button @click="router.push({ name: 'admin' })"
-                class="d-flex align-items-center text-white text-decoration-none center">
+              <button @click="router.push({ name: 'admin' })" class="text-white text-decoration-none center-col">
                 <svg style=" min-width: 6px;min-height: 6px;width: 2.8rem;height: 2.8rem;" viewBox="0 0 16 16"
                   fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -112,8 +110,7 @@
               </button>
             </li class="nav-item">
             <li class="nav-item">
-              <button @click="router.push({ name: 'support' })"
-                class="d-flex align-items-center text-white text-decoration-none center">
+              <button @click="router.push({ name: 'support' })" class="text-white text-decoration-none center-col">
                 <svg style=" min-width: 6px;min-height: 6px;width: 2.8rem;height: 2.8rem;" width="28" height="28"
                   viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -127,7 +124,7 @@
           </ul>
           <hr />
 
-          <div class="dropdown pb-4  nav-item center mx-auto  ;" @click="handleLogout"
+          <div class="dropdown pb-4  nav-item center-col mx-auto  ;" @click="handleLogout"
             style="border-radius: 50%; margin-top:50%;margin-bottom: 50%; width: fit-content ;">
 
             <svg style=" min-width: 7.5px;min-height: 7.5px;width: 3rem;height: 3rem;" viewBox="0 0 24 24" fill="none"
