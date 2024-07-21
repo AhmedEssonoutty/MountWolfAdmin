@@ -292,7 +292,8 @@ body {
   font-weight: var(--fw-bold);
   font-size: var(--fs-16);
   border-radius: var(--brd-radius);
-  // height: 16.7rem;
+  height: 20rem;
+  width: 47rem;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   margin: 10px 0;
   padding: 10px;
@@ -314,7 +315,6 @@ body {
 
 .area-chart {
   background-color: var(--col-off-white);
-  padding: 2rem;
   border-radius: var(--brd-radius);
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }

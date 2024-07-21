@@ -28,14 +28,14 @@
 
             <div class="w-100">
 
-                <div class="center flex-row flex-wrap flex-sm-nowrap gap-5">
+                <div class="center justify-content-between flex-row flex-wrap flex-sm-nowrap">
                     <ManagementCard :card-title="'All Vendors'" :card-count="'0000'" :card-percentage="'58'"
                         :chart-color="'#7AD3FF'">
                     </ManagementCard>
                     <ManagementCard :card-title="'Active Vendors'" :card-count="'0000'" :card-percentage="'70'"
                         :chart-color="'#FFD169'">
                     </ManagementCard>
-                    <ManagementCard :card-title="'New Vendors'" :card-count="'0000'" :card-percentage="'90'"
+                    <ManagementCard :card-title="'Active Vendors'" :card-count="'0000'" :card-percentage="'60'"
                         :chart-color="'#FF7A7A'">
                     </ManagementCard>
                 </div>

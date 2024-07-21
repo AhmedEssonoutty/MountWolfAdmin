@@ -4,7 +4,7 @@
             <p>{{ cardTitle }}</p>
             <p class=" ps-4 count">{{ cardCount }}</p>
         </div>
-        <div style="height: 100% ; width: 50% ;" class="center">
+        <div class="center">
             <CircleChart :percentage="props.cardPercentage" :circleColor="props.chartColor"></CircleChart>
         </div>
     </div>

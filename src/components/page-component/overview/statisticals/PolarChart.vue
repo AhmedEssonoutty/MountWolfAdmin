@@ -1,6 +1,10 @@
 <template>
-    <div v-if="show" class="area-chart w-100 h-100 d-flex align-items-center justify-content-center">
-        <apexchart type="polarArea" :options="chartOptions" :series="series"></apexchart>
+    <div v-if="show" class="area-chart d-flex align-items-center w-100 h-100 justify-content-center">
+        <!-- <apexchart type="polarArea" :options="chartOptions" :series="series"></apexchart> -->
+        <div id="chart">
+            <apexchart type="polarArea" style="width: 45rem;height: 100% " :options="chartOptions" :series="series">
+            </apexchart>
+        </div>
     </div>
 </template>
 
@@ -10,30 +14,67 @@ import { ref, onMounted } from "vue";
 const color = ref('')
 const show = ref(false)
 
-const series = ref([14, 23, 21,])
+// const series = ref([14, 23, 21,])
 
-const chartOptions = ref({
+// const chartOptions = ref({
+//     chart: {
+//         type: 'polarArea',
+//     },
+//     stroke: {
+//         curve: 'smooth',
+//         colors: ['#fff']
+//     },
+//     fill: {
+//         opacity: 0.8
+//     },
+//     responsive: [{
+//         breakpoint: 480,
+//         options: {
+//             chart: {
+//                 width: 200
+//             },
+//             legend: {
+//                 position: 'bottom'
+//             }
+//         }
+//     }]
+// })
+const series = ref([42, 47, 52])
+const chartOptions = ({
     chart: {
-        type: 'polarArea',
+        type: 'polarArea'
+    },
+    labels: ['Rose A', 'Rose B', 'Rose C'],
+    fill: {
+        opacity: 1
     },
     stroke: {
-        curve: 'smooth',
-        colors: ['#fff']
+        width: 1,
+        colors: undefined
     },
-    fill: {
-        opacity: 0.8
+    yaxis: {
+        show: false
     },
-    responsive: [{
-        breakpoint: 480,
-        options: {
-            chart: {
-                width: 200
+    legend: {
+        position: 'bottom'
+    },
+    plotOptions: {
+        polarArea: {
+            rings: {
+                strokeWidth: 0
             },
-            legend: {
-                position: 'bottom'
-            }
+            spokes: {
+                strokeWidth: 0
+            },
         }
-    }]
+    },
+    theme: {
+        monochrome: {
+            enabled: false,
+            shadeTo: 'dark',
+            shadeIntensity: 0.6
+        }
+    }
 })
 
 
@@ -45,4 +86,10 @@ onMounted(() => {
 
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+@media only screen and (max-width: 1016px) {
+    #chart {
+        width: 100%;
+    }
+}
+</style>
