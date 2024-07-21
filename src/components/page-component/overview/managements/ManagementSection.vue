@@ -28,7 +28,7 @@
 
             <div class="w-100">
 
-                <div class="center justify-content-between flex-row flex-wrap flex-sm-nowrap">
+                <div class="center justify-content-between flex-row flex-wrap flex-md-nowrap gap-5">
                     <ManagementCard :card-title="'All Vendors'" :card-count="'0000'" :card-percentage="'58'"
                         :chart-color="'#7AD3FF'">
                     </ManagementCard>
