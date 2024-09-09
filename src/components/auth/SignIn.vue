@@ -62,6 +62,8 @@
 <script setup>
 import { useRouter } from "vue-router";
 // Validator
+import { useAuthStore } from "@/stores/auth/auth";
+import { storeToRefs } from "pinia";
 import useVuelidator from "@vuelidate/core";
 import { required, minLength, maxLength, email } from "@vuelidate/validators";
 required.$message = "Field is required";
@@ -105,17 +107,12 @@ const submitLogin = async () => {
   btnLoadin.value = true;
 
   if (result) {
-    localStorage.setItem("loggedin", true);
-    setTimeout(() => {
-      btnLoadin.value = false;
-    }, 1000);
-    router.push({ name: "overview" });
-  } else {
-    localStorage.setItem("loggedin", false);
-    setTimeout(() => {
-      btnLoadin.value = false;
-    }, 500);
+    let req = await useAuthStore().doLogin(formData.value);
+    if (req) {
+      router.push({ name: "overview" });
+    }
   }
+  btnLoadin.value = false;
 };
 </script>
 

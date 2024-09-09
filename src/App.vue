@@ -4,6 +4,11 @@ import MainLayout from "@/components/global/MainLayout.vue";
 import { useRoute } from "vue-router";
 import { onMounted } from "vue";
 const route = useRoute();
+import { useAuthStore } from "./stores/auth/auth";
+
+onMounted(() => {
+  useAuthStore().userData;
+});
 </script>
 
 <template>
