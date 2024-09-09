@@ -6,7 +6,6 @@
         v-if="route.name !== 'signin' && !navResponse"
         @collapse="navResponse = true"
         class="col-2"
-        style="height: 100% !important"
       ></SideBar>
 
       <SideBarCollapse

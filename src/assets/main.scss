@@ -1,19 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700&display=swap");
 
-* {
-  color: var(--col-wt);
-  margin: 0;
-  padding: 0;
-  border: none;
-  outline: none;
-  box-sizing: border-box;
-  font-style: normal;
-}
-
-html {
-  font-size: 62.5% !important;
-}
-
 .light {
   --ft-main: "Roboto", sans-serif;
 
@@ -116,8 +102,41 @@ html {
   --m-top-1: 1rem;
 }
 
+* {
+  color: var(--col-wt);
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+  font-style: normal;
+}
+
+html {
+  font-size: 62.5% !important;
+  overflow-x: hidden;
+}
+
 body {
   font-family: var(--ft-main);
+}
+
+input:focus {
+  outline: none;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  outline: none;
 }
 
 #app {
@@ -125,8 +144,10 @@ body {
   font-weight: normal;
   min-height: 100vh;
 }
+
 .content {
   background-color: var(--col-bg);
+  height: 100%;
 }
 
 .main-body {
@@ -135,6 +156,7 @@ body {
   border-radius: var(--brd-radius);
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   margin: 2rem;
+  height: 100%;
 }
 
 .hint {
@@ -271,6 +293,10 @@ body {
     text-decoration: none;
     margin: 0;
     padding: 0.7rem;
+    margin: 0.7rem 0;
+    .child {
+      margin: 0.5rem 0;
+    }
     &:hover {
       background-color: var(--col-hover);
       border-radius: var(--brd-radius);

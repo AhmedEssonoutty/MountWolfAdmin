@@ -1,6 +1,6 @@
 <template>
-  <div class="container-fluid" style="min-width:20rem;max-width: 25rem;">
-    <div class="row flex-nowrap">
+  <div class="container-fluid" style="min-width:20rem;max-width: 25rem; ">
+    <div class="row flex-nowrap" style="height: 100%;">
       <div class="side-bar border">
         <div class="center-col align-items-sm-start px-3 pt-2 text-white">
           <div @click="emits('collapse')" class="nav-item d-flex justify-center-between">
