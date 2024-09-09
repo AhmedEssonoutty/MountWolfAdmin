@@ -1,5 +1,6 @@
 import "./assets/main.scss";
 import "./assets/media-queries.scss";
+import "@vueform/multiselect/themes/default.css";
 
 import "bootstrap/dist/css/bootstrap.css";
 

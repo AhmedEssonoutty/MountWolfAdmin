@@ -32,7 +32,7 @@ const router = createRouter({
     {
       path: "/dashboard/Admins",
       name: "admin",
-      component: () => import("@/views/Admins.vue"),
+      component: () => import("@/views/AdminsPage.vue"),
       meta: { title: "Admins", auth: true },
     },
     {
