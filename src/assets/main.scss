@@ -120,6 +120,11 @@ body {
   font-family: var(--ft-main);
 }
 
+#app {
+  margin: 0 auto;
+  font-weight: normal;
+  min-height: 100vh;
+}
 .content {
   background-color: var(--col-bg);
 }

@@ -11,7 +11,7 @@
   "dependencies": {
     "@vuelidate/core": "^2.0.3",
     "@vuelidate/validators": "^2.0.4",
-    "apexcharts": "^3.50.0",
+    "apexcharts": "^3.51.0",
     "bootstrap": "^5.3.3",
     "clipboard-polyfill": "^4.1.0",
     "feather-icons": "^4.29.2",
