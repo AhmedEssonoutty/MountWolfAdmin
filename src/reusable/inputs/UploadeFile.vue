@@ -54,7 +54,6 @@ const props = defineProps({
 });
 
 const uploadFile = (e) => {
-  console.log("doneeeeeeee change");
   const uploadedFile = e.target.files[0];
   if (!uploadedFile) {
     file.value = null;

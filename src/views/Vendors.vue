@@ -61,27 +61,34 @@
             class="vendor-btn"
             style="width: 31.5rem !important; height: 5.2rem"
             placeholder="Search"
+            v-model="searchVe"
           />
-          <svg
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
+          <button
+            @click="searchVendor"
+            :disabled="!searchVe"
             style="
               position: absolute;
               top: 50%;
               right: 10px;
               transform: translateY(-50%);
-              width: 2.4rem;
-              height: 2.4rem;
+              cursor: pointer;
+              padding: 10px;
             "
           >
-            <path
-              fill-rule=" evenodd"
-              clip-rule="evenodd"
-              d="M10.8 2.4C6.16081 2.4 2.4 6.16081 2.4 10.8C2.4 15.4392 6.16081 19.2 10.8 19.2C13.0631 19.2 15.1172 18.305 16.6277 16.8497C16.6593 16.8086 16.6939 16.7691 16.7315 16.7315C16.7691 16.6939 16.8086 16.6593 16.8497 16.6277C18.305 15.1172 19.2 13.0631 19.2 10.8C19.2 6.16081 15.4392 2.4 10.8 2.4ZM19.2383 17.5412C20.7162 15.6936 21.6 13.35 21.6 10.8C21.6 4.83532 16.7647 0 10.8 0C4.83532 0 0 4.83532 0 10.8C0 16.7647 4.83532 21.6 10.8 21.6C13.35 21.6 15.6936 20.7162 17.5412 19.2383L21.9515 23.6485C22.4201 24.1172 23.1799 24.1172 23.6485 23.6485C24.1172 23.1799 24.1172 22.4201 23.6485 21.9515L19.2383 17.5412Z"
-              fill="#464A61"
-            />
-          </svg>
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              style="width: 2.4rem; height: 2.4rem"
+            >
+              <path
+                fill-rule=" evenodd"
+                clip-rule="evenodd"
+                d="M10.8 2.4C6.16081 2.4 2.4 6.16081 2.4 10.8C2.4 15.4392 6.16081 19.2 10.8 19.2C13.0631 19.2 15.1172 18.305 16.6277 16.8497C16.6593 16.8086 16.6939 16.7691 16.7315 16.7315C16.7691 16.6939 16.8086 16.6593 16.8497 16.6277C18.305 15.1172 19.2 13.0631 19.2 10.8C19.2 6.16081 15.4392 2.4 10.8 2.4ZM19.2383 17.5412C20.7162 15.6936 21.6 13.35 21.6 10.8C21.6 4.83532 16.7647 0 10.8 0C4.83532 0 0 4.83532 0 10.8C0 16.7647 4.83532 21.6 10.8 21.6C13.35 21.6 15.6936 20.7162 17.5412 19.2383L21.9515 23.6485C22.4201 24.1172 23.1799 24.1172 23.6485 23.6485C24.1172 23.1799 24.1172 22.4201 23.6485 21.9515L19.2383 17.5412Z"
+                fill="#464A61"
+              />
+            </svg>
+          </button>
         </span>
       </div>
     </div>
@@ -104,15 +111,21 @@
     </div>
 
     <Transition>
-      <AllVendors v-if="showSection == 1"></AllVendors>
+      <AllVendors :searched="serchData" v-if="showSection == 1"></AllVendors>
     </Transition>
 
     <Transition>
-      <ActiveVendors v-if="showSection == 2"></ActiveVendors>
+      <ActiveVendors
+        :searched="serchData"
+        v-if="showSection == 2"
+      ></ActiveVendors>
     </Transition>
 
     <Transition>
-      <SuspendedVendors v-if="showSection == 3"></SuspendedVendors>
+      <SuspendedVendors
+        :searched="serchData"
+        v-if="showSection == 3"
+      ></SuspendedVendors>
     </Transition>
   </div>
 </template>
@@ -121,11 +134,16 @@
 import AllVendors from "@/components/page-component/Vendors/AllVendors.vue";
 import ActiveVendors from "@/components/page-component/Vendors/ActiveVendors.vue";
 import SuspendedVendors from "@/components/page-component/Vendors/SuspendedVendors.vue";
+import { vendorStore } from "@/stores/vendors/vendorStore";
+const { serchData } = storeToRefs(vendorStore());
+
 import { ref, computed } from "vue";
+import { storeToRefs } from "pinia";
 
 const sliderPosition = ref(0);
 const sliderWidth = ref(0);
 const showSection = ref(1);
+const searchVe = ref("");
 
 const handleSwip = (e) => {
   const all = document.querySelectorAll(".tabs-btn");
@@ -146,6 +164,13 @@ const slideTo = computed(() => {
 const slideWidth = computed(() => {
   return sliderWidth.value + "px";
 });
+
+const searchVendor = () => {
+  let res = vendorStore().searchVendor(searchVe.value);
+  if (res) {
+    searchVe.value = "";
+  }
+};
 </script>
 
 <style lang="scss" scoped>
