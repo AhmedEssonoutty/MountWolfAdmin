@@ -14,6 +14,7 @@
       @clear="props.select.clear"
       @change="props.select.change"
       :class="appear"
+      class="multi-item"
     />
   </div>
 </template>
@@ -48,9 +49,9 @@ const formData = ref("");
     width: 100% !important;
     border: 1px solid var(--col-primary);
   }
-  .multiselect-dropdown {
-    border-radius: var(--brd-radius) !important;
-  }
+}
+.multiselect-dropdown {
+  border-radius: var(--brd-radius) !important;
 }
 </style>
 

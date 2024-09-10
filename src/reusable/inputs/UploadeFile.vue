@@ -1,8 +1,8 @@
 <template>
   <div class="upload-field center-row justify-content-between">
     <label :for="`img-field-${props.for}`">
-      <div class="center-row justify-content-between px-5 style-17">
-        <span>Add photo</span><span>Drop here</span>
+      <div class="center-row justify-content-between px-3 style-17">
+        <span class="fs-5">Add photo</span><span class="fs-5">Drop here</span>
       </div></label
     >
     <input
@@ -76,6 +76,7 @@ const uploadFile = (e) => {
 
 <style lang="scss" scoped>
 .upload-field {
+  background-color: white !important;
   position: relative;
   border-radius: var(--brd-radius);
   border: 1px solid var(--col-primary);
@@ -91,6 +92,8 @@ const uploadFile = (e) => {
     border-radius: var(--brd-radius);
     padding: 1rem 2rem;
     border: none;
+    color: var(--col-text);
+    font-size: var(--fs-14);
   }
 
   .img-field-st {

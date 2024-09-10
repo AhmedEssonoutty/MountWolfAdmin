@@ -464,12 +464,12 @@ button {
 
 .modal {
   .add-admin-modal {
+    background-color: var(--col-hover);
     border-radius: var(--brd-radius) !important;
     padding: 3rem 3rem;
     .admin-register {
       height: 6.4rem;
       border-radius: var(--brd-radius-sm);
-      background-color: var(--col-off-white);
       color: var(--col-text);
       font-weight: var(--fw-normal);
       font-size: var(--fs-24);
@@ -481,7 +481,7 @@ button {
       &::placeholder {
         color: var(--col-text);
         font-weight: var(--fw-normal);
-        font-size: var(--fs-24);
+        font-size: var(--fs-18);
         line-height: var(--line-s-28);
         padding-left: 0rem;
       }

@@ -50,11 +50,11 @@
 
       <button v-if="!btnLoadin" class="sign-btn" type="submit">Login</button>
       <button v-else class="sign-btn" type="submit">
-        <vue-feather
-          type="rotate-cw"
-          animation="spin"
-          animation-speed="slow"
-        ></vue-feather>
+        <span
+          class="spinner-border spinner-border-sm fs-3"
+          aria-hidden="true"
+        ></span>
+        <span role="status fs-3" class="mx-2">Loading...</span>
       </button>
     </form>
   </div>

@@ -187,7 +187,7 @@ const validationRules = ref({
   name: { required },
   email: { required, email },
   password: { required },
-  role: { required },
+  // role: { required },
 });
 
 const checkErrName = (key) => {
@@ -244,7 +244,7 @@ const updateAdmin = async () => {
       password: formData.value.password,
       role: formData.value.role,
       image: formData.value.img,
-      id: props.meal.id,
+      id: props.admin.id,
     });
     if (res) {
       closeModal();
