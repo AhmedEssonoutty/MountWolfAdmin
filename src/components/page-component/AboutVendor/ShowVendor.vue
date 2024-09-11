@@ -2,37 +2,6 @@
   <div>
     <div class="d-flex justify-content-between align-items-center my-5">
       <h3 class="admin-title">About vendor</h3>
-      <div class="d-flex gap-5">
-        <span style="position: relative">
-          <input
-            type="search"
-            class="vendor-btn"
-            style="width: 31.6rem !important; height: 5.2rem"
-            placeholder="Search"
-          />
-
-          <svg
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            style="
-              width: 2.4rem;
-              height: 2.4rem;
-              position: absolute;
-              top: 50%;
-              right: 10px;
-              transform: translateY(-50%);
-            "
-          >
-            <path
-              fill-rule=" evenodd"
-              clip-rule="evenodd"
-              d="M10.8 2.4C6.16081 2.4 2.4 6.16081 2.4 10.8C2.4 15.4392 6.16081 19.2 10.8 19.2C13.0631 19.2 15.1172 18.305 16.6277 16.8497C16.6593 16.8086 16.6939 16.7691 16.7315 16.7315C16.7691 16.6939 16.8086 16.6593 16.8497 16.6277C18.305 15.1172 19.2 13.0631 19.2 10.8C19.2 6.16081 15.4392 2.4 10.8 2.4ZM19.2383 17.5412C20.7162 15.6936 21.6 13.35 21.6 10.8C21.6 4.83532 16.7647 0 10.8 0C4.83532 0 0 4.83532 0 10.8C0 16.7647 4.83532 21.6 10.8 21.6C13.35 21.6 15.6936 20.7162 17.5412 19.2383L21.9515 23.6485C22.4201 24.1172 23.1799 24.1172 23.6485 23.6485C24.1172 23.1799 24.1172 22.4201 23.6485 21.9515L19.2383 17.5412Z"
-              fill="#464A61"
-            />
-          </svg>
-        </span>
-      </div>
     </div>
 
     <div class="row mb-5">
@@ -107,6 +76,7 @@
                 v-model="formData.email"
                 placeholder="Email"
                 class="vendor-register w-100"
+                disabled
               />
 
               <button
@@ -199,6 +169,7 @@
                 v-model="formData.password"
                 placeholder="Password"
                 class="vendor-register w-100"
+                disabled
               />
               <button
                 class="copy-icon icon-2"
@@ -289,6 +260,7 @@
                 type="text"
                 placeholder="Phone"
                 class="vendor-register w-100"
+                disabled
               />
               <button
                 class="copy-icon icon-3"
@@ -378,6 +350,7 @@
                 type="text"
                 placeholder="subscription type"
                 class="vendor-register w-100"
+                disabled
               />
               <button
                 class="copy-icon icon-4"
@@ -468,6 +441,7 @@
                 type="text"
                 placeholder="Location"
                 class="vendor-register w-100"
+                disabled
               />
               <button
                 class="copy-icon icon-5"

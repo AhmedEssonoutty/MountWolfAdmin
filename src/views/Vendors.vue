@@ -137,7 +137,7 @@ import SuspendedVendors from "@/components/page-component/Vendors/SuspendedVendo
 import { vendorStore } from "@/stores/vendors/vendorStore";
 const { serchData } = storeToRefs(vendorStore());
 
-import { ref, computed } from "vue";
+import { ref, computed, watch } from "vue";
 import { storeToRefs } from "pinia";
 
 const sliderPosition = ref(0);
@@ -167,10 +167,14 @@ const slideWidth = computed(() => {
 
 const searchVendor = () => {
   let res = vendorStore().searchVendor(searchVe.value);
-  if (res) {
-    searchVe.value = "";
-  }
 };
+watch(searchVe, (newVal) => {
+  setTimeout(() => {
+    if (!newVal.length) {
+      vendorStore().getAllVendors();
+    }
+  }, 200);
+});
 </script>
 
 <style lang="scss" scoped>
