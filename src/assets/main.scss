@@ -102,6 +102,10 @@
   --m-top-1: 1rem;
 }
 
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+
 * {
   color: var(--col-wt);
   margin: 0;
