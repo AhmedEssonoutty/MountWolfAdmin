@@ -39,7 +39,7 @@
           </svg>
         </button>
 
-        <button class="vendor-btn">
+        <button class="vendor-btn" @click="exportVendors">
           <div style="display: inline-block; justify-self: center !important">
             Export
           </div>
@@ -175,6 +175,10 @@ watch(searchVe, (newVal) => {
     }
   }, 200);
 });
+
+const exportVendors = () => {
+  vendorStore().doExportVendors();
+};
 </script>
 
 <style lang="scss" scoped>

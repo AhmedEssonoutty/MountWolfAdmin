@@ -3,7 +3,9 @@
     <table class="table table-hover table-st-1">
       <thead v-if="props.header">
         <tr>
-          <th v-for="(head, i) in header" :key="i">{{ head }}</th>
+          <th v-for="(head, i) in header" :key="i">
+            {{ head }}
+          </th>
         </tr>
       </thead>
 

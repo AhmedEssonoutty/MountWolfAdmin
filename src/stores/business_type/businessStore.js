@@ -2,7 +2,7 @@ import { defineStore } from "pinia";
 import { mainStore } from "../mainStore";
 import axiosInstance from "../axios_instance";
 
-export const vendorStore = defineStore("vendorStore", {
+export const businessStore = defineStore("business", {
   state: () => ({
     checkToken: document.cookie
       .split(";")
@@ -14,18 +14,17 @@ export const vendorStore = defineStore("vendorStore", {
         }),
         {}
       )["Admin"],
-    allVendors: [],
-    activeVendors: [],
-    suspendedVendors: [],
-    vendor: [],
-    serchData: [],
+    allBusiness: [],
+    activeBusiness: [],
+    suspendedBusiness: [],
+    business: [],
   }),
-
+  getters: {},
   actions: {
-    // all admins
-    async getAllVendors() {
+    // all Business
+    async getAllBusiness() {
       await axiosInstance
-        .get(`${mainStore().apiLink}/admin/users/all`, {
+        .get(`${mainStore().apiLink}/admin/business_type/all`, {
           headers: {
             Authorization: `Bearer ${
               this.checkToken ? JSON.parse(this.checkToken)["token"] : ""
@@ -33,7 +32,7 @@ export const vendorStore = defineStore("vendorStore", {
           },
         })
         .then((res) => {
-          this.allVendors = res.data.data;
+          this.allBusiness = res.data.data;
         })
         .catch((err) => {
           mainStore().showAlert(
@@ -44,10 +43,10 @@ export const vendorStore = defineStore("vendorStore", {
           );
         });
     },
-    // // active admins
-    async getActiveVendors() {
+    // active Business
+    async getActiveBusiness() {
       await axiosInstance
-        .get(`${mainStore().apiLink}/admin/users/show`, {
+        .get(`${mainStore().apiLink}/admin/business_type/show`, {
           headers: {
             Authorization: `Bearer ${
               this.checkToken ? JSON.parse(this.checkToken)["token"] : ""
@@ -55,7 +54,7 @@ export const vendorStore = defineStore("vendorStore", {
           },
         })
         .then((res) => {
-          this.activeVendors = res.data.data;
+          this.activeBusiness = res.data.data;
         })
         .catch((err) => {
           mainStore().showAlert(
@@ -66,10 +65,10 @@ export const vendorStore = defineStore("vendorStore", {
           );
         });
     },
-    // // suspended admins
-    async getSuspendedVendors() {
+    // suspended Business
+    async getSuspendedBusiness() {
       await axiosInstance
-        .get(`${mainStore().apiLink}/admin/users/trashed`, {
+        .get(`${mainStore().apiLink}/admin/business_type/trashed`, {
           headers: {
             Authorization: `Bearer ${
               this.checkToken ? JSON.parse(this.checkToken)["token"] : ""
@@ -77,7 +76,7 @@ export const vendorStore = defineStore("vendorStore", {
           },
         })
         .then((res) => {
-          this.suspendedVendors = res.data.data;
+          this.suspendedBusiness = res.data.data;
         })
         .catch((err) => {
           mainStore().showAlert(
@@ -89,63 +88,11 @@ export const vendorStore = defineStore("vendorStore", {
         });
     },
 
-    // // admin
-    async getVendor(id) {
+    // delete Business
+    async destroyBusiness(data) {
       let result;
       await axiosInstance
-        .post(`${mainStore().apiLink}/admin/users/one`, id, {
-          headers: {
-            Authorization: `Bearer ${
-              this.checkToken ? JSON.parse(this.checkToken)["token"] : ""
-            }`,
-          },
-        })
-        .then((res) => {
-          this.vendor = res.data.data;
-          result = res;
-        })
-        .catch((err) => {
-          mainStore().showAlert(
-            Object.values(err.response.data.errors)[0][0]
-              ? Object.values(err.response.data.errors)[0][0]
-              : "Something went wrong, please try again",
-            2
-          );
-          result = false;
-        });
-      return result;
-    },
-    // // delete admin
-    async destroyVendor(id) {
-      let result;
-      await axiosInstance
-        .post(`${mainStore().apiLink}/admin/users/destroy`, id, {
-          headers: {
-            Authorization: `Bearer ${
-              this.checkToken ? JSON.parse(this.checkToken)["token"] : ""
-            }`,
-          },
-        })
-        .then((res) => {
-          result = res;
-          mainStore().showAlert("Vendor deleted suuccessfully", 1);
-        })
-        .catch((err) => {
-          mainStore().showAlert(
-            Object.values(err.response.data.errors)[0][0]
-              ? Object.values(err.response.data.errors)[0][0]
-              : "Something went wrong, please try again",
-            2
-          );
-          result = false;
-        });
-      return result;
-    },
-    // // restore admin
-    async restoreVendor(id) {
-      let result;
-      await axiosInstance
-        .post(`${mainStore().apiLink}/admin/users/restore`, id, {
+        .post(`${mainStore().apiLink}/admin/business_type/destroy`, data, {
           headers: {
             Authorization: `Bearer ${
               this.checkToken ? JSON.parse(this.checkToken)["token"] : ""
@@ -166,11 +113,11 @@ export const vendorStore = defineStore("vendorStore", {
         });
       return result;
     },
-    // // remove admin
-    async deleteVendor(id) {
+    // restore Business
+    async restoreBusiness(data) {
       let result;
       await axiosInstance
-        .post(`${mainStore().apiLink}/admin/users/forceDelete`, id, {
+        .post(`${mainStore().apiLink}/admin/business_type/restore`, data, {
           headers: {
             Authorization: `Bearer ${
               this.checkToken ? JSON.parse(this.checkToken)["token"] : ""
@@ -191,11 +138,11 @@ export const vendorStore = defineStore("vendorStore", {
         });
       return result;
     },
-    // // add admin
-    async addVendor(data) {
+    // delete Business
+    async deleteBusiness(data) {
       let result;
       await axiosInstance
-        .post(`${mainStore().apiLink}/admin/users/store`, data, {
+        .post(`${mainStore().apiLink}/admin/business_type/forceDelete`, data, {
           headers: {
             Authorization: `Bearer ${
               this.checkToken ? JSON.parse(this.checkToken)["token"] : ""
@@ -204,8 +151,6 @@ export const vendorStore = defineStore("vendorStore", {
         })
         .then((res) => {
           result = res;
-          mainStore().showAlert("Vendor created suuccessfully", 1);
-          this.getAllAdmins();
         })
         .catch((err) => {
           mainStore().showAlert(
@@ -218,11 +163,11 @@ export const vendorStore = defineStore("vendorStore", {
         });
       return result;
     },
-    // update admin
-    async updateVendor(data) {
+    // add Business
+    async addBusiness(data) {
       let result;
       await axiosInstance
-        .post(`${mainStore().apiLink}/admin/users/update`, data, {
+        .post(`${mainStore().apiLink}/admin/business_type/store`, data, {
           headers: {
             Authorization: `Bearer ${
               this.checkToken ? JSON.parse(this.checkToken)["token"] : ""
@@ -231,10 +176,8 @@ export const vendorStore = defineStore("vendorStore", {
         })
         .then((res) => {
           result = res;
-          mainStore().showAlert("Vendor updated suuccessfully", 1);
-          this.getAllVendors();
-          this.getSuspendedVendors();
-          this.getActiveVendors();
+          mainStore().showAlert("Business Added Successfully", 1);
+          this.getAllBusiness();
         })
         .catch((err) => {
           mainStore().showAlert(
@@ -247,24 +190,23 @@ export const vendorStore = defineStore("vendorStore", {
         });
       return result;
     },
-    // search vendor
-    async searchVendor(data) {
+    // updae Business
+    async updateBusiness(data) {
       let result;
       await axiosInstance
-        .post(
-          `${mainStore().apiLink}/clients/search-result`,
-          { name: data },
-          {
-            headers: {
-              Authorization: `Bearer ${
-                this.checkToken ? JSON.parse(this.checkToken)["token"] : ""
-              }`,
-            },
-          }
-        )
+        .post(`${mainStore().apiLink}/admin/business_type/update`, data, {
+          headers: {
+            Authorization: `Bearer ${
+              this.checkToken ? JSON.parse(this.checkToken)["token"] : ""
+            }`,
+          },
+        })
         .then((res) => {
           result = res;
-          this.serchData = res.data.data;
+          mainStore().showAlert("Business Updated Successfully", 1);
+          this.getActiveBusiness();
+          this.getActiveBusiness();
+          this.getSuspendedBusiness();
         })
         .catch((err) => {
           mainStore().showAlert(
@@ -277,33 +219,20 @@ export const vendorStore = defineStore("vendorStore", {
         });
       return result;
     },
-    // all admins
-    async doExportVendors() {
+    // get Business
+    async showBusiness(id) {
       let result;
       await axiosInstance
-        .get(`${mainStore().apiLink}/admin/export`, {
+        .post(`${mainStore().apiLink}/admin/business_type/one`, id, {
           headers: {
-            responseType: "arraybuffer",
             Authorization: `Bearer ${
               this.checkToken ? JSON.parse(this.checkToken)["token"] : ""
             }`,
           },
         })
         .then((res) => {
+          this.business = res.data.data;
           result = res;
-          console.log(res.data.data);
-          const blob = new Blob([res.data.data], {
-            type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-          });
-
-          const link = document.createElement("a");
-          link.href = URL.createObjectURL(blob);
-          link.download = "Vendors-list.xlsx";
-
-          document.body.appendChild(link);
-          link.click();
-
-          document.body.removeChild(link);
         })
         .catch((err) => {
           mainStore().showAlert(
@@ -312,7 +241,9 @@ export const vendorStore = defineStore("vendorStore", {
               : "Something went wrong, please try again",
             2
           );
+          result = false;
         });
+      return result;
     },
   },
 });
