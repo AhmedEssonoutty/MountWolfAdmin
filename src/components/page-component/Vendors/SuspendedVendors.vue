@@ -9,7 +9,7 @@
           'Plan',
           'Email',
           'Phone',
-          'Menus Items',
+          'Menu Items',
           'Business Type',
           'Location',
           'Action',
@@ -39,7 +39,8 @@
             >
               {{ vendor.status }}
             </td>
-            <td>{{ vendor.plan ? vendor.plan : "..." }}</td>
+
+            <td>{{ vendor.plan_id ? vendor.plan_id : "..." }}</td>
             <td>{{ vendor.email }}</td>
             <td>{{ vendor.phone }}</td>
             <td>{{ vendor.menus ? vendor.menus : "..." }}</td>
@@ -48,7 +49,7 @@
 
             <!-- actions -->
             <td>
-              <button type="button" class="btn border-0">
+              <a :href="`mailto:${vendor.email}`" target="_blank">
                 <svg
                   style="width: 2rem; height: 2rem"
                   class="edit-btn"
@@ -66,7 +67,8 @@
                     />
                   </g>
                 </svg>
-              </button>
+              </a>
+
               <button type="button" class="btn border-0">
                 <svg
                   class="edit-btn"

@@ -2,7 +2,9 @@
   <div class="main-body" style="padding: 2rem 3rem">
     <ShowVendor></ShowVendor>
 
-    <Transactions></Transactions>
+    <span style="opacity: 0.3">
+      <Transactions></Transactions>
+    </span>
     <!-- <MultiSelect class="user-login" :field="userSelectField" /> -->
   </div>
 </template>

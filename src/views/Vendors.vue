@@ -64,6 +64,7 @@
             v-model="searchVe"
           />
           <button
+            v-if="searchVe"
             @click="searchVendor"
             :disabled="!searchVe"
             style="
@@ -74,6 +75,7 @@
               cursor: pointer;
               padding: 10px;
             "
+            class="search-btn"
           >
             <svg
               viewBox="0 0 24 24"

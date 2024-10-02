@@ -236,6 +236,7 @@ export const useAuthStore = defineStore("authStore", {
         })
         .then((res) => {
           result = res;
+          window.location.reload();
           this.setCookie({}, 0);
           this.isLoggedin = false;
           this.setStauts(false);

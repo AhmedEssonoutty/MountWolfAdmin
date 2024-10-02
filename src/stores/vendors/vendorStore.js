@@ -128,7 +128,7 @@ export const vendorStore = defineStore("vendorStore", {
         })
         .then((res) => {
           result = res;
-          mainStore().showAlert("Vendor deleted suuccessfully", 1);
+          mainStore().showAlert("Vendor Suspended suuccessfully", 1);
         })
         .catch((err) => {
           mainStore().showAlert(
@@ -154,6 +154,7 @@ export const vendorStore = defineStore("vendorStore", {
         })
         .then((res) => {
           result = res;
+          mainStore().showAlert("Vendor Restored suuccessfully", 1);
         })
         .catch((err) => {
           mainStore().showAlert(
@@ -265,6 +266,12 @@ export const vendorStore = defineStore("vendorStore", {
         .then((res) => {
           result = res;
           this.serchData = res.data.data;
+          res.data.data.length == 0
+            ? mainStore().showAlert(
+                "No vendors found for the selected filter values.",
+                3
+              )
+            : "";
         })
         .catch((err) => {
           mainStore().showAlert(

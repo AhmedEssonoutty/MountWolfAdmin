@@ -276,17 +276,17 @@
           <hr />
 
           <div
-            class="dropdown pb-4 nav-item center mx-auto ;"
-            @click="handleLogout"
+            class="dropdown pb-4 nav-item center mx-auto"
+            @click="handleLogout()"
             style="
+              width: 5rem;
+              height: 5rem;
               border-radius: 50%;
               margin-top: 50%;
               margin-bottom: 50%;
-              width: fit-content;
             "
           >
             <button
-              @click="handleLogout"
               class="d-flex align-items-center text-white text-decoration-none dropdown-toggle center"
               id="dropdownUser1"
               data-bs-toggle="dropdown"
@@ -311,16 +311,6 @@
                 />
               </svg>
             </button>
-
-            <!-- <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
-              <li><router-link  class="dropdown-item" to="">New project...</router-link></li>
-              <li><router-link  class="dropdown-item" to="">Settings</router-link></li>
-              <li><router-link  class="dropdown-item" to="">Profile</router-link></li>
-              <li>
-                <hr class="dropdown-divider" />
-              </li>
-              <li><router-link  class="dropdown-item" to="">Sign out</router-link></li>
-            </ul> -->
           </div>
         </div>
       </div>

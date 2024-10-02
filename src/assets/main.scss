@@ -743,3 +743,14 @@ button {
     stroke: gray;
   }
 }
+
+.search-btn {
+  &:hover {
+    background-color: rgba(153, 153, 153, 0.5);
+    border-radius: 1.2rem;
+  }
+
+  &:hover svg {
+    stroke: var(--col-gray);
+  }
+}

@@ -16,7 +16,7 @@
         <tr>
           <td
             class="style-9 text-center"
-            style="background-color: transparent !important"
+            style="background-color: transparent !important; width: fit-content"
             colspan="9"
           >
             {{ foot }}
