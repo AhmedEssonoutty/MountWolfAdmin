@@ -5,10 +5,10 @@
     >
       <template #table>
         <tr v-for="(admin, i) in allAdmins" :key="i">
-          <td>{{ admin.id }}</td>
-          <td>
+          <td style="width: 10%">{{ admin.id }}</td>
+          <td style="width: 20%">
             <div
-              class="d-flex gap-1 w-100 align-items-center justify-content-center"
+              class="d-flex gap-1 w-100 align-items-center justify-content-start"
             >
               <span
                 style="
@@ -22,17 +22,20 @@
               {{ admin.name }}
             </div>
           </td>
-          <td>{{ admin.email }}</td>
+          <td style="width: 20%">{{ admin.email }}</td>
 
-          <td>{{ admin.type }}</td>
-          <td>
+          <td style="width: 12.5%">{{ admin.type }}</td>
+          <td style="width: 12.5%">
             {{ moment(new Date(admin.created_at)).format("DD-MM-YYYY") }}
           </td>
-          <td v-if="!admin.deleted_at" style="color: #34c759 !important">
+          <td
+            v-if="!admin.deleted_at"
+            style="color: #34c759 !important; width: 12.5%"
+          >
             Active
           </td>
-          <td v-else>Suspended</td>
-          <td>
+          <td v-else style="width: 12.5%">Suspended</td>
+          <td style="width: 12.5%">
             <button
               type="button"
               class="btn border-0"

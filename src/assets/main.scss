@@ -205,7 +205,7 @@ button {
 .singBox {
   background-color: var(--col-off-white);
   width: 65.7rem;
-  height: 43rem;
+  height: 50rem;
   border-radius: var(--brd-radius);
   display: flex;
   flex-direction: column;
@@ -425,8 +425,8 @@ button {
       background-color: var(--col-off-white);
       font-size: var(--fs-16);
       font-weight: var(--fw-bold);
-      padding: 1rem 0;
-      text-align: center;
+      padding: 1rem;
+      text-align: start;
       color: var(--col-text);
     }
   }
@@ -435,10 +435,9 @@ button {
     tr td {
       font-size: var(--fs-12);
       font-weight: var(--fw-bold);
-      padding: 1rem 0;
+      padding: 1rem;
       color: var(--col-text);
-      text-align: center;
-      text-align: center;
+      text-align: start;
       border: none;
       cursor: pointer;
     }
@@ -720,7 +719,7 @@ button {
           font-weight: var(--fw-bold) !important;
           line-height: var(--ln-height-19) !important;
           padding: 1rem 0;
-          text-align: center;
+          text-align: start;
         }
       }
     }
@@ -753,4 +752,49 @@ button {
   &:hover svg {
     stroke: var(--col-gray);
   }
+}
+
+input::placeholder {
+  color: var(--col-text);
+  font-weight: var(--fw-normal);
+  font-size: var(--fs-18);
+  line-height: var(--line-s-28);
+  padding-left: 0rem;
+}
+
+.admin-register {
+  height: 6.4rem;
+  border-radius: var(--brd-radius);
+  color: var(--col-text);
+  font-weight: var(--fw-normal);
+  font-size: var(--fs-24);
+  line-height: var(--line-s-28);
+  padding-left: 1rem;
+  width: 100%;
+  border: 1px solid var(--col-primary);
+
+  &:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+  &::placeholder {
+    color: var(--col-text);
+    font-weight: var(--fw-normal);
+    font-size: var(--fs-18);
+    line-height: var(--line-s-28);
+    padding-left: 0rem;
+  }
+
+  &::-ms-input-placeholder {
+    color: var(--col-text);
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-24);
+    line-height: var(--line-s-28);
+    padding-left: 2rem;
+  }
+}
+.eye {
+  position: absolute;
+  bottom: 50%;
+  right: 5%;
+  transform: translateY(50%);
 }

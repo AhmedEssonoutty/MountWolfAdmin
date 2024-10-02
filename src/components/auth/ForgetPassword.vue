@@ -2,18 +2,18 @@
   <div class="singBox">
     <p class="head-btn mx-auto">Forget password</p>
     <!-- phase one -->
-    <span v-if="phase == 1" class="w-100">
+    <div v-if="phase == 1" class="w-100" style="flex: 1">
       <PhaseOne @SucceOne="(phase = 2), (email = $event)"></PhaseOne>
-    </span>
+    </div>
 
     <!-- phase two -->
-    <span v-if="phase == 2" class="w-100">
+    <div v-if="phase == 2" class="w-100" style="flex: 1">
       <PhaseTwo @SucceTwo="phase = 3" :mail="email"></PhaseTwo>
-    </span>
+    </div>
     <!-- phase two -->
-    <span v-if="phase == 3" class="w-100">
+    <div v-if="phase == 3" class="w-100" style="flex: 1">
       <PhaseThree @succeThree="emits('login')"></PhaseThree>
-    </span>
+    </div>
   </div>
 </template>
 

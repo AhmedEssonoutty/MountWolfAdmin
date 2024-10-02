@@ -25,6 +25,7 @@ export const forgetPassStore = defineStore("forgetPass", {
         .post(`${mainStore().apiLink}/user/forget/password`, email)
         .then((res) => {
           result = res;
+          mainStore().showAlert("Check your email", 3);
         })
         .catch((err) => {
           mainStore().showAlert(
@@ -68,6 +69,7 @@ export const forgetPassStore = defineStore("forgetPass", {
         })
         .then((res) => {
           result = true;
+          mainStore().showAlert("Password Changed Suuccessfully", 1);
         })
         .catch((err) => {
           mainStore().showAlert(

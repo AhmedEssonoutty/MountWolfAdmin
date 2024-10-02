@@ -1,7 +1,11 @@
 <template>
-  <div>
-    <form action="#" @submit.prevent="forgetPassword" class="center-col w-100">
-      <span class="row w-100">
+  <div class="h-100">
+    <form
+      action="#"
+      @submit.prevent="forgetPassword"
+      class="center-col justify-content-around h-100 w-100"
+    >
+      <div class="row w-100">
         <span class="col">
           <InptField
             v-model="formData.email"
@@ -18,7 +22,7 @@
             </span></span
           >
         </span>
-      </span>
+      </div>
       <button
         v-if="!btnLoadin"
         class="sign-btn mt-4"

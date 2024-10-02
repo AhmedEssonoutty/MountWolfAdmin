@@ -177,6 +177,8 @@ export const useAdminStore = defineStore("adminStore", {
           },
         })
         .then((res) => {
+          mainStore().showAlert("Admin deleted suuccessfully", 1);
+
           result = res;
         })
         .catch((err) => {

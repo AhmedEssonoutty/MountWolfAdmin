@@ -61,6 +61,7 @@ const updateValue = (value) => {
     width: 100%;
     border-radius: var(--brd-radius);
     border: 1px solid var(--col-primary);
+    font-size: var(--fs-16);
   }
 }
 </style>
