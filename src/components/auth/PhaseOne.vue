@@ -3,7 +3,7 @@
     <form
       action="#"
       @submit.prevent="forgetPassword"
-      class="center-col justify-content-around h-100 w-100"
+      class="center-col justify-content-around align-items-center h-100 w-100"
     >
       <div class="row w-100">
         <span class="col">

@@ -65,7 +65,7 @@ export const useAuthStore = defineStore("authStore", {
             expireAfter = res.data.data.expire_in * 1000;
           } else {
             // set to 10 hours
-            expireAfter = 60 * 60 * 1000 * 10;
+            expireAfter = 60 * 60 * 1000 * 1;
           }
 
           if (res.data.data.expire_in) {
